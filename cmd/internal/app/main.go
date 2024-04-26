@@ -6,9 +6,21 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+//	clientes []cliente = {
+//		id: "1", valor: "100000", tipo: ""
+//	}
+type cliente struct {
+	id        int
+	valor     int
+	tipo      string
+	descricao string
+}
+
 func main() {
+
 	api := gin.Default()
-	api.POST("/clientes/:id/transacoes", func(ctx *gin.Context) {
+
+	api.POST("/clientes/:id/extrato", func(ctx *gin.Context) {
 		id := ctx.Param("id")
 
 		ctx.JSON(http.StatusOK, gin.H{
@@ -21,5 +33,5 @@ func main() {
 			"message": "message",
 		})
 	})
-	api.Run(":9999")
+	api.Run(":8080")
 }
