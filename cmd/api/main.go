@@ -1,12 +1,14 @@
-package main
+package api
 
 import (
+	routes "github.com/jair-anderson-souza/rinha-2024/cmd/api/route"
+
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
-//	clientes []cliente = {
+//	var clientes = []cliente = {
 //		id: "1", valor: "100000", tipo: ""
 //	}
 type cliente struct {
@@ -17,8 +19,10 @@ type cliente struct {
 }
 
 func main() {
+	routes.Example()
 
 	api := gin.Default()
+	api.Routes()
 
 	api.POST("/clientes/:id/extrato", func(ctx *gin.Context) {
 		id := ctx.Param("id")

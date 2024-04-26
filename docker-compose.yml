@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   api01: &api
-    image: jair-anderson-souza/rinha:latest
+    image: jairsilva631/rinha:latest
     hostname: api01
     platform: linux/amd64
     environment:
@@ -19,7 +19,7 @@ services:
 
   api02:
     <<: *api
-    image: jair-anderson-souza/rinha:latest
+    image: jairsilva631/rinha:latest
     hostname: api02
     environment:
       - DB_HOSTNAME=db
