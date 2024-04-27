@@ -1,8 +1,8 @@
-package main
+package learning
 
 import "fmt"
 
-func main() {
+func Variaveis() {
 	fmt.Print("Test Module")
 
 	text := "text"
@@ -27,8 +27,4 @@ func main() {
 	const PI = "3.14"
 	fmt.Println(PI)
 
-}
-
-func Example() {
-	main()
 }

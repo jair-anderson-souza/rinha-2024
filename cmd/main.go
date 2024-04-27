@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jair-anderson-souza/rinha_2024/cmd/rotas"
+	"github.com/jair-anderson-souza/rinha_2024/learning"
 )
 
 //	var clientes = []cliente = {
@@ -18,9 +18,8 @@ type cliente struct {
 }
 
 func main() {
-	rotas.Example()
-	// numero := testNumbers()
-	// fmt.Println(numero)
+	learning.Numbers()
+	learning.Variaveis()
 	api := gin.Default()
 	api.Routes()
 
