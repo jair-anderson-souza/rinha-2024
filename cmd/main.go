@@ -1,11 +1,10 @@
-package api
+package main
 
 import (
-	routes "github.com/jair-anderson-souza/rinha-2024/cmd/api/route"
-
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/jair-anderson-souza/rinha_2024/cmd/rotas"
 )
 
 //	var clientes = []cliente = {
@@ -19,8 +18,9 @@ type cliente struct {
 }
 
 func main() {
-	routes.Example()
-
+	rotas.Example()
+	// numero := testNumbers()
+	// fmt.Println(numero)
 	api := gin.Default()
 	api.Routes()
 
